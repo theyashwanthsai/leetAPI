@@ -19,3 +19,26 @@ You can install this package via npm:
 ```bash
 npm i leetapi
 ```
+## Usage
+
+```javascript
+const api = require('leetapi');
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+    api.getSubmissions('theyashwanthsai')
+  .then(data => {
+    console.log(data);
+    res.json(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+```
