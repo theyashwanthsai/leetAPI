@@ -51,3 +51,4 @@ app.listen(port, () => {
 - [x] User past submissions
 - [ ] User profile related
 - [ ] Error Handling
+- [ ] tests
